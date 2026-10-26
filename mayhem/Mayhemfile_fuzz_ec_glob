@@ -1,0 +1,9 @@
+project: savantenvs/editorconfig-core-c
+target: fuzz_ec_glob
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ec_glob/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ec_glob
+    libfuzzer: true
+    timeout: 5

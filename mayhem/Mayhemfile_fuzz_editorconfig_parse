@@ -1,0 +1,9 @@
+project: savantenvs/editorconfig-core-c
+target: fuzz_editorconfig_parse
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_editorconfig_parse/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_editorconfig_parse
+    libfuzzer: true
+    timeout: 5
